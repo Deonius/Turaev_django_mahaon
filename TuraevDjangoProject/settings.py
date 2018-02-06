@@ -117,6 +117,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+INSTALLED_APPS = [
+    'django.contrib.admin' ,
+    'django.contrib.auth' ,
+    'django.contrib.contenttypes' ,
+    'django.contrib.session' ,
+    'django.contrib.messages' ,
+    'django.contrib.staticfiles' ,
+    'news_blog'
+]
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 
