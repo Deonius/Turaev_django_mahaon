@@ -1,0 +1,24 @@
+{% extends "firstapp/base.html" %}
+
+{% block title %}My amazing news blog{% endblock %}
+
+{% block content %}
+    {% if articles %}
+        {% for article in articles %}
+            <div class="row">
+                <div class="col-sm">
+                    <h3><a href = {% url 'article' article_id=article.id %}
+<a href={% url 'article' article_id=article.id %}
+</h3>
+                    <p>{{ article.text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="row">
+            <div class="col-sm">
+                <p>No articles are available.</p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
